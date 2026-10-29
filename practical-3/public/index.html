@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CRUD App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Users Management</h1>
+        <p class="subtitle">Create, view, update and delete users.</p>
+
+        <form id="userForm">
+            <input type="hidden" id="userId">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                required
+            >
+
+            <button type="submit" id="submitBtn">Add User</button>
+            <button type="button" id="cancelBtn" hidden>Cancel Edit</button>
+        </form>
+
+        <div class="list-header">
+            <h2>All Users</h2>
+            <button id="refreshBtn" class="refresh">Refresh</button>
+        </div>
+
+        <p id="message"></p>
+        <div id="usersList">Loading users...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
